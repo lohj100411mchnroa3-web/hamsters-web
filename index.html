@@ -1,172 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuidado de Hámsters</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            margin: 0;
-            background: #fff5e6;
-            padding: 0;
-        }
-
-        /* Encabezado */
-        header {
-            background: linear-gradient(135deg, #ffcc80, #ffb74d);
-            padding: 30px;
-            text-align: center;
-            color: #5a3e1b;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.6rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-
-        /* Imagen principal */
-        .hero img {
-            width: 100%;
-            max-height: 350px;
-            object-fit: cover;
-            border-bottom: 5px solid #ffb74d;
-        }
-
-        /* Tarjetas */
-        .card {
-            background: #fff;
-            margin: 25px auto;
-            padding: 20px;
-            width: 85%;
-            max-width: 800px;
-            border-radius: 18px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-            animation: fadeIn 1.3s ease;
-        }
-
-        h2 {
-            color: #8b5e34;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        /* Galería de imágenes */
-        .gallery {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .gallery img {
-            width: 100%;
-            border-radius: 14px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.07);
-        }
-
-        figure {
-            width: 30%;
-            text-align: center;
-        }
-
-        /* Imágenes dentro de secciones */
-        .inline-img {
-            width: 100%;
-            border-radius: 18px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            margin-bottom: 15px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            background: #ffb74d;
-            padding: 15px;
-            margin-top: 30px;
-            color: #4a3219;
-            font-weight: bold;
-        }
-
-        /* Animación */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cuidado de Hámsters — Todo en 1 archivo</title>
+<style>
+  :root{
+    --bg:#f7f7fb;
+    --card:#ffffff;
+    --accent:#f6c85f;
+    --text:#222;
+    --muted:#555;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Inter, system-ui, Arial, sans-serif; margin:0; background:var(--bg); color:var(--text)}
+  .site-header{background:linear-gradient(90deg,var(--accent),#ffd57e); padding:2rem; text-align:center}
+  .site-header h1{margin:0 0 .25rem}
+  .container{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; padding:1.5rem; max-width:1100px; margin:0 auto}
+  .card{background:var(--card); padding:1rem; border-radius:12px; box-shadow:0 6px 18px rgba(20,20,30,0.06); display:flex; flex-direction:column; align-items:flex-start}
+  .card h2{margin:0 0 .5rem}
+  .media{width:100%; display:flex; gap:1rem; align-items:center}
+  .img{width:100%; max-height:220px; object-fit:contain; margin-top:8px; border-radius:10px}
+  .svg-wrap{width:100%; max-height:220px; display:block}
+  .text{flex:1}
+  .site-footer{padding:1rem; text-align:center; color:var(--muted)}
+  @media(min-width:880px){
+    .card {flex-direction:row; align-items:center}
+    .svg-wrap{width:320px; flex-shrink:0}
+    .text{padding-left:8px}
+  }
+</style>
 </head>
 <body>
+  <header class="site-header">
+    <h1>Cuidado básico de hámsters</h1>
+    <p>Guía breve y práctica para mantener a tu hámster feliz y sano.</p>
+  </header>
 
-    <header>
-        <h1>🐹 Guía de Cuidado de Hámsters</h1>
-        <p>Aprende cómo cuidar correctamente a tu pequeño amigo</p>
-    </header>
-
-    <section class="hero">
-        <img src="https://i.imgur.com/tvtiQDa.jpg" alt="Hamster lindo">
+  <main class="container">
+    <!-- Alimentación -->
+    <section class="card" id="alimentacion">
+      <div class="svg-wrap" aria-hidden="true">
+        <!-- hamster1.svg: hámster comiendo (inline SVG) -->
+        <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" class="img" role="img" aria-label="Hámster comiendo">
+          <rect width="800" height="600" rx="20" fill="#fff7e8"/>
+          <g transform="translate(120,80)">
+            <ellipse cx="260" cy="300" rx="180" ry="120" fill="#d09b6f"/>
+            <ellipse cx="200" cy="220" rx="140" ry="110" fill="#f2bf91"/>
+            <circle cx="160" cy="190" r="18" fill="#3b2b20"/>
+            <circle cx="240" cy="190" r="10" fill="#fff"/>
+            <path d="M140 230 q40 20 80 0" stroke="#b36b3a" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <rect x="320" y="320" width="60" height="30" rx="6" fill="#f3a" transform="rotate(-12 320 320)" opacity="0.9"/>
+            <text x="330" y="340" font-size="22" font-family="Arial" fill="#fff">🍎</text>
+          </g>
+        </svg>
+      </div>
+      <div class="text">
+        <h2>1. Alimentación</h2>
+        <p>Provee una mezcla comercial para hámsters, agua fresca y pequeñas porciones de fruta o verdura (no en exceso). Evita alimentos azucarados o cítricos con frecuencia.</p>
+      </div>
     </section>
 
-    <section class="card">
-        <h2>🐾 Tipos de Hámsters</h2>
-        <div class="gallery">
-            <figure>
-                <img src="https://i.imgur.com/5zrL5V0.jpg" alt="Hamster Sirio">
-                <figcaption>Hámster Sirio</figcaption>
-            </figure>
-
-            <figure>
-                <img src="https://i.imgur.com/fC6CJgT.jpg" alt="Hamster Enano Ruso">
-                <figcaption>Hámster Enano Ruso</figcaption>
-            </figure>
-
-            <figure>
-                <img src="https://i.imgur.com/trUSkpg.jpg" alt="Hamster Roborowski">
-                <figcaption>Hámster Roborowski</figcaption>
-            </figure>
-        </div>
+    <!-- Alojamiento -->
+    <section class="card" id="alojamiento">
+      <div class="svg-wrap" aria-hidden="true">
+        <!-- hamster2.svg: hámster descansando en su jaula (inline SVG) -->
+        <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" class="img" role="img" aria-label="Hámster descansando en su jaula">
+          <rect width="800" height="600" rx="20" fill="#eef9ff"/>
+          <g transform="translate(90,60)">
+            <rect x="40" y="220" width="520" height="260" rx="18" fill="#fff" stroke="#d7e8f5"/>
+            <ellipse cx="300" cy="360" rx="140" ry="80" fill="#f3ca9a"/>
+            <circle cx="260" cy="340" r="16" fill="#241b16"/>
+            <path d="M220 380 q40 30 120 0" stroke="#c77" stroke-width="8" fill="none" stroke-linecap="round" opacity=".8"/>
+            <rect x="100" y="260" width="60" height="40" rx="8" fill="#cde"/>
+          </g>
+        </svg>
+      </div>
+      <div class="text">
+        <h2>2. Alojamiento</h2>
+        <p>Jaula con buen sustrato (virutas sin polvo o papel reciclado), casita para dormir, área para escarbar y una rueda adecuada al tamaño del hámster.</p>
+      </div>
     </section>
 
-    <section class="card">
-        <h2>🥕 Alimentación</h2>
-        <img class="inline-img" src="https://i.imgur.com/LVqLMT7.jpg" alt="Hamster comiendo">
-        <p>
-            Los hámsters necesitan una dieta variada:
-        </p>
-        <ul>
-            <li>Mezcla de semillas balanceada</li>
-            <li>Verduras frescas</li>
-            <li>Proteínas ocasionales (huevo, pollo)</li>
-        </ul>
-        <p><strong>Evitar:</strong> chocolate, ajo, cebolla, cítricos.</p>
+    <!-- Ejercicio -->
+    <section class="card" id="ejercicio">
+      <div class="svg-wrap" aria-hidden="true">
+        <!-- hamster3.svg: hámster en rueda (inline SVG) -->
+        <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" class="img" role="img" aria-label="Hámster en una rueda de ejercicio">
+          <rect width="800" height="600" rx="20" fill="#fffaf6"/>
+          <g transform="translate(80,40)">
+            <circle cx="360" cy="300" r="160" fill="none" stroke="#e6c58a" stroke-width="18"/>
+            <circle cx="360" cy="300" r="10" fill="#b57a47"/>
+            <ellipse cx="360" cy="240" rx="90" ry="60" fill="#f3c29a"/>
+            <circle cx="330" cy="230" r="12" fill="#2e241f"/>
+            <path d="M320 280 q30 18 70 0" stroke="#ad6b3f" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="text">
+        <h2>3. Ejercicio</h2>
+        <p>Rueda (sólida, sin barras), túneles y juguetes para mantenerlo activo. Supervisa el tiempo fuera de la jaula en un espacio seguro y cerrado.</p>
+      </div>
     </section>
 
-    <section class="card">
-        <h2>🏡 Hábitat Ideal</h2>
-        <img class="inline-img" src="https://i.imgur.com/uJWLbYp.jpg" alt="Jaula para hamster">
-        <p>Un hábitat adecuado incluye:</p>
-        <ul>
-            <li>Tamaño mínimo de 80x50 cm</li>
-            <li>Rueda sin barrotes</li>
-            <li>Sustrato profundo para excavar</li>
-            <li>Casitas, túneles y juguetes</li>
-        </ul>
+    <!-- Salud -->
+    <section class="card" id="salud">
+      <div class="svg-wrap" aria-hidden="true">
+        <!-- hamster4.svg: hámster curioso, chequeo de salud (inline SVG) -->
+        <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" class="img" role="img" aria-label="Hámster y chequeo de salud">
+          <rect width="800" height="600" rx="20" fill="#f0fff4"/>
+          <g transform="translate(110,70)">
+            <ellipse cx="260" cy="300" rx="160" ry="110" fill="#e8bfa0"/>
+            <circle cx="230" cy="260" r="16" fill="#241b16"/>
+            <path d="M200 300 q40 20 100 0" stroke="#c97a44" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <rect x="340" y="320" width="90" height="30" rx="6" fill="#dff"/>
+            <text x="350" y="340" font-size="18" font-family="Arial" fill="#222">🔎</text>
+          </g>
+        </svg>
+      </div>
+      <div class="text">
+        <h2>4. Salud y limpieza</h2>
+        <p>Revisa su pelaje, ojos y dientes regularmente. Limpia la jaula parcialmente cada semana y a fondo cada 2–4 semanas. Consulta a un veterinario especializado ante cualquier síntoma.</p>
+      </div>
     </section>
 
-    <footer>
-        <p>🐹 Sitio creado con cariño para aprender sobre hámsters 🧡</p>
-    </footer>
+  </main>
 
+  <footer class="site-footer">
+    <p>Recuerda: ante dudas sobre la salud de tu hámster, consulta a un veterinario especializado en animales pequeños.</p>
+  </footer>
 </body>
 </html>
+
