@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidado de Hámsters</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            background: #fff5e6;
+            padding: 0;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #ffcc80, #ffb74d);
+            padding: 30px;
+            text-align: center;
+            color: #5a3e1b;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Imagen principal */
+        .hero img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-bottom: 5px solid #ffb74d;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: #fff;
+            margin: 25px auto;
+            padding: 20px;
+            width: 85%;
+            max-width: 800px;
+            border-radius: 18px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            animation: fadeIn 1.3s ease;
+        }
+
+        h2 {
+            color: #8b5e34;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        /* Galería de imágenes */
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.07);
+        }
+
+        figure {
+            width: 30%;
+            text-align: center;
+        }
+
+        /* Imágenes dentro de secciones */
+        .inline-img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #ffb74d;
+            padding: 15px;
+            margin-top: 30px;
+            color: #4a3219;
+            font-weight: bold;
+        }
+
+        /* Animación */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🐹 Guía de Cuidado de Hámsters</h1>
+        <p>Aprende cómo cuidar correctamente a tu pequeño amigo</p>
+    </header>
+
+    <section class="hero">
+        <img src="https://i.imgur.com/tvtiQDa.jpg" alt="Hamster lindo">
+    </section>
+
+    <section class="card">
+        <h2>🐾 Tipos de Hámsters</h2>
+        <div class="gallery">
+            <figure>
+                <img src="https://i.imgur.com/5zrL5V0.jpg" alt="Hamster Sirio">
+                <figcaption>Hámster Sirio</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://i.imgur.com/fC6CJgT.jpg" alt="Hamster Enano Ruso">
+                <figcaption>Hámster Enano Ruso</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://i.imgur.com/trUSkpg.jpg" alt="Hamster Roborowski">
+                <figcaption>Hámster Roborowski</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>🥕 Alimentación</h2>
+        <img class="inline-img" src="https://i.imgur.com/LVqLMT7.jpg" alt="Hamster comiendo">
+        <p>
+            Los hámsters necesitan una dieta variada:
+        </p>
+        <ul>
+            <li>Mezcla de semillas balanceada</li>
+            <li>Verduras frescas</li>
+            <li>Proteínas ocasionales (huevo, pollo)</li>
+        </ul>
+        <p><strong>Evitar:</strong> chocolate, ajo, cebolla, cítricos.</p>
+    </section>
+
+    <section class="card">
+        <h2>🏡 Hábitat Ideal</h2>
+        <img class="inline-img" src="https://i.imgur.com/uJWLbYp.jpg" alt="Jaula para hamster">
+        <p>Un hábitat adecuado incluye:</p>
+        <ul>
+            <li>Tamaño mínimo de 80x50 cm</li>
+            <li>Rueda sin barrotes</li>
+            <li>Sustrato profundo para excavar</li>
+            <li>Casitas, túneles y juguetes</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>🐹 Sitio creado con cariño para aprender sobre hámsters 🧡</p>
+    </footer>
+
+</body>
+</html>
